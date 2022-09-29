@@ -40,8 +40,8 @@ namespace CurrencyConverterApi
       });
       services.AddHttpClient("openExchangeApiUrl", c =>
       {
-          c.BaseAddress = new Uri("https://api.apilayer.com/");
-          c.DefaultRequestHeaders.Add("apikey", "xtz773lyy6DpzYSilg5Bz7DYznkQpzNK");
+          c.BaseAddress = new Uri("https://api.apilayer.com/"); 
+          c.DefaultRequestHeaders.Add("apikey", "xtz773lyy6DpzYSilg5Bz7DYznkQpzNK"); // ideally this should be kept in secrets manager and accessed via that
        });
 
       services.AddScoped<ICurrencyConverterService, CurrencyConverterService>();
